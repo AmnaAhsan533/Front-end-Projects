@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login" class="input-group" onsubmit="return validateLogin()">
+                <input type="text" id="loginUserId" class="input-field" placeholder="User Id" required>
+                <input type="password" id="loginPassword" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+            <!-- Registration Form -->
+            <form id="register" class="input-group" onsubmit="return validateRegister()">
+                <input type="text" id="registerUserId" class="input-field" placeholder="User Id" required>
+                <input type="password" id="registerPassword" class="input-field" placeholder="Enter Password" required>
+                <input type="email" id="registerEmail" class="input-field" placeholder="Email Id" required>
+                <input type="checkbox" id="registerTerms" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+        function validateLogin() {
+    // Get user input values
+    var userId = document.getElementById("loginUserId").value.trim();
+    var password = document.getElementById("loginPassword").value.trim();
+
+    // Retrieve user data from localStorage
+    var storedUser = JSON.parse(localStorage.getItem(userId));
+
+    if (storedUser && storedUser.password === password) {
+        // Save logged-in user session
+        localStorage.setItem("loggedInUser", JSON.stringify(storedUser));
+        
+        // Redirect to todo-list page
+        window.location.href = "todo.html";
+        return false; // Prevent form submission
+    } else {
+        alert("Invalid User ID or Password!");
+        return false; // Prevent form submission
+    }
+}
+
+
+function validateRegister() {
+    const userId = document.getElementById("registerUserId").value.trim();
+    const password = document.getElementById("registerPassword").value.trim();
+    const email = document.getElementById("registerEmail").value.trim();
+    const terms = document.getElementById("registerTerms").checked;
+
+    if (!userId || !password || !email) {
+        alert("All fields are required.");
+        return false;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    if (!terms) {
+        alert("You must agree to the terms and conditions.");
+        return false;
+    }
+
+    // Check if user already exists
+    if (localStorage.getItem(userId)) {
+        alert("User ID already exists. Please choose a different one.");
+        return false;
+    }
+
+    // Save user data to localStorage
+    const userData = { userId, password, email };
+    localStorage.setItem(userId, JSON.stringify(userData));
+
+    alert("Registration successful! You can now log in.");
+    login(); // Switch to the login form
+    return false; // Prevent form submission
+}
+
+    </script>
+</body>
+</html>

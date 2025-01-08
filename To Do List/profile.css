@@ -1,0 +1,83 @@
+/* Reset some basic styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style the body */
+body {
+    background-color: #f5dac8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Profile container */
+#profileInfo {
+    background-color: #de9b77;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Profile heading */
+h1 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Profile info text */
+#profileInfo p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Strong text styling */
+#profileInfo strong {
+    color: #333;
+}
+
+/* Button styling */
+button {
+    background-color: #b56c45;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #b34800;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #profileInfo {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #profileInfo p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(1.jfif);
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    left: 350px;
+}
+.todo-list h2{
+    color: rgb(54, 37, 12);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    justify-content: center;
+}
+.todo-list h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input, select {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #f5f5f5;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+input:focus, select:focus {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Focus effect */
+}
+button{
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    padding: 16px 50px;
+    background: #a84e44;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul{
+    margin-top: 20px;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    transition: transform 0.3s, background-color 0.3s ease;
+}
+ul li:hover {
+    background-color: #f2f2f2; /* Slight hover effect for tasks */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(https://www.shutterstock.com/image-vector/check-mark-icon-flat-design-260nw-270100346.jpg);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f8d7da;
+    transition: background-color 0.3s ease;
+}
+ul li span:hover{
+    background-color: #f1b0b0; /* Lighter red for delete button hover */
+    color: white;
+    cursor: pointer;
+}
+
+
+ul li div {
+    font-size: 14px;
+    color: #555;
+}
+
+ul li div:nth-child(2) {
+    font-size: 12px;
+    color: #777;
+}
+
+ul li div:nth-child(3) {
+    font-size: 12px;
+    font-weight: bold;
+    color: #777;
+}
+
+ul li {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li span {
+    font-weight: bold;
+}
+
+ul li span.checked {
+    text-decoration: line-through;
+}
+
+ul li span:hover {
+    color: red;
+    cursor: pointer;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div id="profileInfo">
+        <h1>User Profile</h1>
+        <p><strong>Username:</strong> Loading...</p>
+        <p><strong>Email:</strong> Loading...</p>
+        <button onclick="goToTodo()">Back to To-Do List</button>
+    </div>
+
+    <script>
+        // Fetch user data
+        var loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        console.log(loggedInUser);
+
+        if (loggedInUser) {
+            document.querySelector("#profileInfo p:nth-of-type(1)").innerHTML = `<strong>Username:</strong> ${loggedInUser.userId}`;
+            document.querySelector("#profileInfo p:nth-of-type(2)").innerHTML = `<strong>Email:</strong> ${loggedInUser.email || 'Not Provided'}`;
+        } else {
+            alert("No user logged in!");
+            window.location.href = "index.html";
+        }
+
+        function goToTodo() {
+            window.location.href = "todo.html";
+        }
+    </script>
+</body>
+</html>

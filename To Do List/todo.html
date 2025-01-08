@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-list">
+            <h2>To-Do List <img src="https://cdn-icons-png.flaticon.com/512/9809/9809689.png"></h2>
+             <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+                <button id="voiceButton" onclick="voice()">🎤</button> <!-- Voice button -->
+             </div>
+             <ul id="list-container">
+                <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li> -->
+             </ul>
+        </div>
+    </div>
+    <!-- Button to go to the Profile page -->
+<button id="profileButton" href="profile.html">Go to Profile </button>
+<script>
+    // Get the button or link
+document.getElementById("profileButton").addEventListener("click", function () {
+    // Redirect to the Profile page
+    window.location.href = "profile.html";
+});
+
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
