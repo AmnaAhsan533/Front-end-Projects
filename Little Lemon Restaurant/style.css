@@ -1,0 +1,145 @@
+body{
+    margin: 3rem 0;
+    background-color: #daeee4;
+    font-family: sans-serif, 'Markazi Text';
+    line-height: 1.6;
+    color: #03180e;
+}
+
+h1 h2 h4{
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+header >img{
+    display: block;
+    margin: 1rem auto;
+    
+}
+nav{
+    height: 3rem;
+    background-color: #578870;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav a{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #03180e;
+    text-decoration: none;
+    margin-left: 5rem;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color: #185337;
+}
+
+section{
+    display: flex;
+    
+    
+}
+.flyer{
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #7ea592;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    
+}
+.flyer h1{
+    text-align: center;
+    color: #04301b;
+    text-shadow: 3px 3px 3px #020805;
+    
+}
+.flyer p{
+    margin: 2rem;
+    text-align: center;
+}
+
+.box{ 
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;  
+    max-width: 1200px;
+    padding: 1rem;
+    text-align: left;
+}
+.box ul{
+    margin: 0;
+    padding: 0 1rem;
+    list-style: none;
+}
+.box ul li {
+    margin-bottom: 1rem;
+}
+.box a {
+    color: #03180e;
+    font-weight: bold;
+    text-decoration: underline;
+}.box a:hover {
+    color: #185337;
+    text-decoration: none;
+}
+.box article {
+    background-color: #9eb9ac;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px gray;
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+    max-width: 350px;
+    margin: 1rem;
+}
+.box img{
+    border-radius: 10px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+.menu p, .table li, .opening-hours li{
+    margin: 0.5rem 0;
+    list-style: none;
+    
+}
+
+a{
+    color: #03180e;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #185337;
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #578870;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    color: #ffffff;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+}
+footer img{
+    margin-right: 0.5rem;
+}
