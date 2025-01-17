@@ -19,3 +19,5 @@ Here are some of the key projects included in this repository:
 
 1. **To Do List**  
    Description: A feature-rich to-do list webpage with voice command support, allowing users to add, manage, and delete tasks. It uses localStorage to persist tasks and integrates the Web Speech API for voice input, enabling hands-free task management with ease.
+2. **Restaurant Website**
+   Description: A modern restaurant website showcasing the menu, ambiance, and services. Features online reservations, contact information, and an intuitive user experience.
